@@ -5,10 +5,10 @@ import com.revrobotics.CANSparkMaxLowLevel;
 
 public class RobotMap {
 
-  private static final int motor_L1 = 0;
-  private static final int motor_L2 = 1;
-  private static final int motor_R1 = 2;
-  private static final int motor_R2 = 3;
+  private static final int motor_L1 = 2;
+  private static final int motor_L2 = 6;
+  private static final int motor_R1 = 8;
+  private static final int motor_R2 = 4;
 
   public static CANSparkMax canSparkMax_motor_L1;
   public static CANSparkMax canSparkMax_motor_L2;
