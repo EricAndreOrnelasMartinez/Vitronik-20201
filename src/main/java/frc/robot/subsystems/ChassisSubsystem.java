@@ -37,7 +37,7 @@ public class ChassisSubsystem extends Subsystem{
 
     public void move(double x, double y){
         double speedL = (y + (x * 0.8));
-        double speedR = (y + (x * 0.8));
+        double speedR = (y - (x * 0.8));
         chassisMotorL1.set(speedL);
         chassisMotorL2.set(speedL);
         chassisMotorR1.set(speedR);
@@ -45,7 +45,7 @@ public class ChassisSubsystem extends Subsystem{
     }
 
     public void moveBack(double x, double y){
-        double speedL = (y + (x * 0.8));
+        double speedL = (y - (x * 0.8));
         double speedR = (y + (x * 0.8));
         chassisMotorL1.set(speedL * -1);
         chassisMotorL2.set(speedL * -1);
