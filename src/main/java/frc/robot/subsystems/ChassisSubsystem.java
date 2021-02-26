@@ -32,6 +32,7 @@ public class ChassisSubsystem extends Subsystem{
         encoderR = RobotMap.canSparkMax_motor_R1.getEncoder();
         encoderL.setPosition(0.0);
         encoderR.setPosition(0.0);
+        SmartDashboard.putNumber("Encoder init", encoderL.getPosition());
     }
 
     public void move(double x, double y){
