@@ -4,6 +4,7 @@ import com.revrobotics.CANEncoder;
 import com.revrobotics.CANSparkMax;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.RobotMap;
 
 public class ChassisSubsystem extends Subsystem{
@@ -78,6 +79,7 @@ public class ChassisSubsystem extends Subsystem{
             chassisMotorR1.set(0.0);
             chassisMotorR2.set(0.0);
         }
+        SmartDashboard.putNumber("Encoder position", encoderL.getPosition());
     }
 
     public void moveBackward(double rotation, double speed){
