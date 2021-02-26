@@ -10,6 +10,8 @@ public class Autonomous extends Subsystem{
     }
 
     public void start(){
+        Robot.m_ChassisSubsystem.resetLE();
+        Robot.m_ChassisSubsystem.resetRE();
         Robot.m_ChassisSubsystem.moveForward(3, 0.1);
     }
     
