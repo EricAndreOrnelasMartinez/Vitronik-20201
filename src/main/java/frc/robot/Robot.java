@@ -33,10 +33,10 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     RobotMap.init();
+    autocmd = new Autonomous();
     m_ChassisSubsystem = new ChassisSubsystem();
     m_autonomousCommand = new AutoCommand();
     driveCommand = new DriveJoyM();
-    autocmd = new Autonomous();
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
