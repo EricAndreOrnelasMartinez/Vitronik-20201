@@ -27,8 +27,6 @@ public class ChassisSubsystem extends Subsystem{
         chassisMotorL2.setOpenLoopRampRate(0.1);
         chassisMotorR1.setOpenLoopRampRate(0.1);
         chassisMotorR2.setOpenLoopRampRate(0.1);
-        chassisMotorL1.setInverted(true);
-        chassisMotorL2.setInverted(true);
         encoderL = RobotMap.canSparkMax_motor_L1.getEncoder();
         encoderR = RobotMap.canSparkMax_motor_R1.getEncoder();
         encoderL.setPosition(0.0);
