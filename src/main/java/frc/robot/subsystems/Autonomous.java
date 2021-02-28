@@ -10,7 +10,7 @@ public class Autonomous extends Subsystem{
     }
 
     public void start(){
-        Robot.m_ChassisSubsystem.moveForward(10, 0.1);
+        Robot.m_ChassisSubsystem.moveForward(6.25, 0.1);
     }
     
 }
