@@ -87,10 +87,10 @@ public class ChassisSubsystem extends Subsystem{
 
     public void moveBackward(double rotation, double speed){
         if(encoderL.getPosition() > rotation || encoderR.getPosition() > rotation){
-            chassisMotorL1.set(speed);
-            chassisMotorL2.set(speed);
-            chassisMotorR1.set(speed);
-            chassisMotorR2.set(speed);
+            chassisMotorL1.set(speed * -1);
+            chassisMotorL2.set(speed * -1);
+            chassisMotorR1.set(speed * -1);
+            chassisMotorR2.set(speed * -1);
         }else {
             chassisMotorL1.set(0.0);
             chassisMotorL2.set(0.0);
