@@ -138,6 +138,12 @@ public class ChassisSubsystem extends Subsystem{
     public void resetLE(){
         encoderL.setPosition(0.0);
     }
+    public double getEncoderL(){
+        return encoderL.getPosition();
+    }
+    public double getEncoderR(){
+        return encoderR.getPosition();
+    }
     private double getRawC(double rotation){
         return rotation * 6.25;
     }
