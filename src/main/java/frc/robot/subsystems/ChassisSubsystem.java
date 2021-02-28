@@ -30,6 +30,8 @@ public class ChassisSubsystem extends Subsystem{
         chassisMotorR2.setOpenLoopRampRate(0.1);
         encoderL = RobotMap.canSparkMax_motor_L1.getEncoder();
         encoderR = RobotMap.canSparkMax_motor_R1.getEncoder();
+        chassisMotorR1.setInverted(true);
+        chassisMotorR2.setInverted(true);
         encoderL.setPosition(0.0);
         encoderR.setPosition(0.0);
         SmartDashboard.putNumber("Encoder init", encoderL.getPosition());
