@@ -77,8 +77,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    m_ChassisSubsystem.resetLE();
-    m_ChassisSubsystem.resetRE();
     //m_autonomousCommand = m_chooser.getSelected();
 
     /*
