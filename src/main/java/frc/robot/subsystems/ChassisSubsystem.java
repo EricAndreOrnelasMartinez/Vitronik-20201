@@ -75,6 +75,7 @@ public class ChassisSubsystem extends Subsystem{
             chassisMotorL2.set(speed);
             chassisMotorR1.set(speed);
             chassisMotorR2.set(speed);
+            System.out.println(encoderR.getPosition());
         
         }else {
             chassisMotorL1.set(0.0);
@@ -83,7 +84,6 @@ public class ChassisSubsystem extends Subsystem{
             chassisMotorR2.set(0.0);
         }
         SmartDashboard.putNumber("Encoder position", encoderL.getPosition());
-        System.out.println(encoderR.getPosition());
     }
 
     public void moveBackward(double rotation, double speed){
