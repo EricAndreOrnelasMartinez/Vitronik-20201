@@ -69,7 +69,7 @@ public class ChassisSubsystem extends Subsystem{
     }
 
     public void moveForward(double rotation, double speed){
-        if(encoderL.getPosition() < rotation && encoderR.getPosition() < rotation){
+        if(encoderL.getPosition() < getRawC(rotation) && encoderR.getPosition() < getRawC(rotation)){
             chassisMotorL1.set(speed);
             chassisMotorL2.set(speed);
             chassisMotorR1.set(speed);
@@ -137,5 +137,8 @@ public class ChassisSubsystem extends Subsystem{
 
     public void resetLE(){
         encoderL.setPosition(0.0);
+    }
+    private double getRawC(double rotation){
+        return rotation * 6.25;
     }
 }
