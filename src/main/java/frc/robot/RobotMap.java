@@ -1,6 +1,5 @@
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel;
@@ -12,9 +11,9 @@ public class RobotMap {
   private static final int motor_R1 = 8;
   private static final int motor_R2 = 4;
   private static final int shooter_L = 7;
-  private static final int hopper_M1 = 5;
+  private static final int hopper_M1 = 7;
   private static final int hopper_M2 = 4;
-  private static final int intake_M1 = 7;
+  private static final int intake_M1 = 5;
 
   public static CANSparkMax canSparkMax_motor_L1;
   public static CANSparkMax canSparkMax_motor_L2;
