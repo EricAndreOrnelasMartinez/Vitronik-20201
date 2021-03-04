@@ -14,6 +14,7 @@ public class Autonomous extends Subsystem{
         timer = new Timer();
     }
     public void initTime(){
+        timer.reset();
         timer.start();
     }
 
@@ -28,6 +29,14 @@ public class Autonomous extends Subsystem{
             Robot.m_sShooterSub.shoot(0);
             Robot.m_ChassisSubsystem.stop();
         }
+    }
+
+    public boolean finished(){
+        return (timer.get() > 15);
+    }
+    public void setTime(){
+        timer.stop();
+        timer.reset();
     }
     
 }
