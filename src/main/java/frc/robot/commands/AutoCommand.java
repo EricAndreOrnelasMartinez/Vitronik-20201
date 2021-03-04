@@ -16,7 +16,9 @@ public class AutoCommand extends Command {
 
   // Called just before this Command runs the first time
   @Override
-  protected void initialize() {}
+  protected void initialize() {
+    Robot.autocmd.initTime();
+  }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
