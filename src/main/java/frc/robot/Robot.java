@@ -16,11 +16,13 @@ import frc.robot.subsystems.Autonomous;
 import frc.robot.subsystems.ChassisSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.HopperInatkeSub;
+import frc.robot.subsystems.ShooterSub;
 
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static ChassisSubsystem m_ChassisSubsystem;
   public static HopperInatkeSub m_HopperInatkeSub;
+  public static ShooterSub m_sShooterSub;
   public static Autonomous autocmd;
   public static OI m_oi;
   private Command driveCommand;
@@ -36,6 +38,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     RobotMap.init();
     autocmd = new Autonomous();
+    m_sShooterSub = new ShooterSub();
     m_HopperInatkeSub = new HopperInatkeSub();
     m_ChassisSubsystem = new ChassisSubsystem();
     m_autonomousCommand = new AutoCommand();

@@ -18,7 +18,16 @@ public class Autonomous extends Subsystem{
     }
 
     public void start(){
-        System.out.println(timer.get());
+        if(timer.get() <= 13 && timer.get() > 0){
+            Robot.m_HopperInatkeSub.moveToS(0.5, 0.5);
+            Robot.m_sShooterSub.shoot(0.5);
+        }if(timer.get() > 13 && timer.get() < 15){
+            Robot.m_ChassisSubsystem.moveForward(1, 0.1);
+        }else{
+            Robot.m_HopperInatkeSub.moveToS(0, 0);
+            Robot.m_sShooterSub.shoot(0);
+            Robot.m_ChassisSubsystem.stop();
+        }
     }
     
 }

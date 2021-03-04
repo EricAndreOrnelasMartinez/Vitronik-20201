@@ -147,4 +147,10 @@ public class ChassisSubsystem extends Subsystem{
     private double getRawC(double rotation){
         return rotation * 6.25;
     }
+    public void stop(){
+        chassisMotorL1.set(0.0);
+        chassisMotorL2.set(0.0);
+        chassisMotorR1.set(0.0);
+        chassisMotorR2.set(0.0);
+    }
 }
