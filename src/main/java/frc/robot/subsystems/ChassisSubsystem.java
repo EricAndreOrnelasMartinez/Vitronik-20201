@@ -142,7 +142,7 @@ public class ChassisSubsystem extends Subsystem{
         return encoderL.getPosition();
     }
     public double getEncoderR(){
-        return encoderR.getPosition();
+        return encoderR.getPosition(); 
     }
     private double getRawC(double rotation){
         return rotation * 6.25;
